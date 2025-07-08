@@ -8,10 +8,19 @@ impl Rectangle {
     }
 }
 
+pub fn prints_returns_10(num: i32) -> i32 {
+    println!("{}", num);
+    10
+}
 #[cfg(test)]
 mod tests {
     use super::*;
 
+    #[test]
+    fn this_test_will_pass() {
+        let value = prints_returns_10(4);
+        assert_eq!(10, value);
+    }
     #[test]
     fn larger_can_hold_smaller() {
         let larger = Rectangle {
